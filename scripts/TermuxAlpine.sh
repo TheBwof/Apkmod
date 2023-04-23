@@ -1,7 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash -e
 # Copyright ©2023 by TheBwof. All rights reserved.
 #
-# Email : lkpandey950@gmail.com
+# Email : thebwof@gmail.com
 ################################################################################
 
 # colors
