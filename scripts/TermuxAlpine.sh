@@ -1,5 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash -e
-# Copyright ©2019 by Hax4Us. All rights reserved.
+# Copyright ©2023 by TheBwof. All rights reserved.
 #
 # Email : lkpandey950@gmail.com
 ################################################################################
@@ -146,7 +146,7 @@ EOM
 # Utility function to touchup Alpine
 
 finalwork() {
-	[ ! -e ${DESTINATION}/finaltouchup.sh ] && curl --silent -LO https://raw.githubusercontent.com/Hax4us/Apkmod/master/scripts/finaltouchup.sh
+	[ ! -e ${DESTINATION}/finaltouchup.sh ] && curl --silent -LO https://raw.githubusercontent.com/TheBwof/Apkmod/main/scripts/finaltouchup.sh
 	if [ "${MOTD}" = "ON" ]; then
 		bash ${DESTINATION}/finaltouchup.sh --add-motd
 	else
@@ -219,9 +219,9 @@ printline
 printf "\n${yellow} Now you can enjoy a very small (just 1 MB!) Linux environment in your Termux :)\n Don't forget to star my work\n"
 printline
 printline
-printf "\n${blue} [*] Email   :${yellow}    lkpandey950@gmail.com\n"
-printf "$blue [*] Website :${yellow}    https://hax4us.com\n"
-printf "$blue [*] YouTube :${yellow}    https://youtube.com/hax4us\n"
+printf "\n${blue} [*] Email   :${yellow}    thebwof@gmail.com\n"
+printf "$blue [*] Website :${yellow}    https://fahimahamed.com\n"
+printf "$blue [*] YouTube :${yellow}    https://youtube.com/@fahimahamed\n"
 printline
 printf "$red \n NOTE : $yellow use ${red}--uninstall${yellow} option for uninstall\n"
 printline
