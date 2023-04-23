@@ -37,13 +37,13 @@ detect_os() {
 install_deps_kali() {
 	printf "[*] Installing dependencies...\n"
 	apt-get install metasploit-framework bc apktool default-jdk -y > /dev/null
-	wget https://github.com/thebwof/Apkmod/raw/master/apkmod.sh -O $PREFIX/bin/apkmod && chmod +x $PREFIX/bin/apkmod
+	wget https://github.com/thebwof/Apkmod/raw/main/apkmod.sh -O $PREFIX/bin/apkmod && chmod +x $PREFIX/bin/apkmod
 	printf "[*] Done\n"
 }
 
 setup_alpine() {
 	if [ ! "$1" = "--without-alpine" ]; then
-		wget https://raw.githubusercontent.com/TheBwof/Apkmod/master/scripts/TermuxAlpine.sh -O TermuxAlpine.sh
+		wget https://raw.githubusercontent.com/TheBwof/Apkmod/main/scripts/TermuxAlpine.sh -O TermuxAlpine.sh
 		bash TermuxAlpine.sh
 	fi
 	mkdir -p ${ALPINEDIR}/root/.bind
@@ -84,7 +84,7 @@ install_deps() {
 	done
 
 	wget ${APKTOOL_URL} -O ${ALPINEDIR}/opt/apktool.jar
-	wget https://github.com/thebwof/Apkmod/raw/master/apkmod.sh -O ${BINDIR}/apkmod
+	wget https://github.com/thebwof/Apkmod/raw/main/apkmod.sh -O ${BINDIR}/apkmod
 	chmod +x ${BINDIR}/apkmod
 	chmod +x ${ALPINEDIR}/usr/bin/aapt
 	chmod +x ${ALPINEDIR}/usr/bin/aapt2
@@ -93,13 +93,13 @@ install_deps() {
     mkdir -p ~/.apkmod/hooks
 
     for file in apkmod.p12 signkill.jar hooks/hook2.smali hooks/hook.smali hooks/hook2.dex; do
-        wget https://github.com/thebwof/Apkmod/raw/master/$file -O ~/.apkmod/$file 
+        wget https://github.com/thebwof/Apkmod/raw/main/$file -O ~/.apkmod/$file 
     done
 }
 
 install_scripts() {
 	for script in signkill.sh apktool_termux.sh apktool_alpine.sh apk.rb jadx_termux.sh jadx_alpine.sh; do
-		wget https://github.com/thebwof/Apkmod/raw/master/scripts/${script} -O ${script}
+		wget https://github.com/thebwof/Apkmod/raw/main/scripts/${script} -O ${script}
 	done
 
 	mv apktool_termux.sh ${BINDIR}/apktool && chmod +x ${BINDIR}/apktool
