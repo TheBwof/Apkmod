@@ -2,7 +2,7 @@
 
 ########################################
 # Project : Apkmod     		       #
-# Author  : Fahim Ahamed @TheBwof        #
+# Author  : Fahim Ahamed @TheBwof	       #
 # Email   : thebwof@gmail.com      #
 ########################################
 
@@ -240,7 +240,7 @@ validate_input() {
 ###############################
 
 update() {
-	temp=$(curl -L -s https://github.com/thebwof/Apkmod/raw/master/apkmod.sh | grep -w "VERSION=" | head -n1)
+	temp=$(curl -L -s https://github.com/TheBwof/Apkmod/raw/main/apkmod.sh | grep -w "VERSION=" | head -n1)
 	N_VERSION=$(echo ${temp} | sed -e 's/[^0-9]\+[^0-9]/ /g' | cut -d '"' -f1)
 	if [ "${1}" != "-u" ]; then
 		[ 1 -eq $(echo "${N_VERSION} != ${VERSION}" | bc -l) ] && print_status "Update is available, run [ apkmod -u ] for update" && exit 1
@@ -252,7 +252,7 @@ update() {
 		else
 			ARGS=--without-alpine
 		fi
-		wget https://raw.githubusercontent.com/thebwof/Apkmod/master/setup.sh && bash setup.sh $ARGS
+		wget https://raw.githubusercontent.com/TheBwof/Apkmod/main/setup.sh && bash setup.sh $ARGS
 	fi
 }
 
